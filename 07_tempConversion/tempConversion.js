@@ -4,9 +4,6 @@ const ftoc = function(fahr) {
   let answer = cfromf.toFixed(1)
   let ans = Number(answer)
 
-  if (Number.isInteger(cfromf)) {
-    return cfromf;
-  }
   return ans;
 };
 
@@ -16,9 +13,6 @@ const ctof = function(cel) {
   let answer = ffromc.toFixed(1)
   let ans = Number(answer)
 
-  if (Number.isInteger(ffromc)) {
-    return ffromc;
-  }
   return ans;
 };
 
