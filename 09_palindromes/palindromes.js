@@ -1,12 +1,11 @@
 const palindromes = function(string) {
 
-    const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+    const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ]/g;
     const result = string.replace(regex, '').toLowerCase();
 
     let stringArray = result.split('');
     let sLen = stringArray.length;
     let newArr = [];
-
 
     for (let i = sLen - 1; i >=0; i--) {
         let popped = stringArray.pop()
