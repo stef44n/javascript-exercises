@@ -1,7 +1,7 @@
 const palindromes = function(string) {
 
     const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-    const result = string.replace(regex, '');
+    const result = string.replace(regex, '').toLowerCase();
 
     let stringArray = result.split('');
     let sLen = stringArray.length;
