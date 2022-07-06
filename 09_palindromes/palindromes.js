@@ -1,7 +1,12 @@
 const palindromes = function(string) {
-    let stringArray = string.split('');
+
+    const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+    const result = string.replace(regex, '');
+
+    let stringArray = result.split('');
     let sLen = stringArray.length;
     let newArr = [];
+
 
     for (let i = sLen - 1; i >=0; i--) {
         let popped = stringArray.pop()
@@ -10,7 +15,7 @@ const palindromes = function(string) {
 
     let reversedStr = newArr.join('')
 
-    if (reversedStr === string) {
+    if (reversedStr === result) {
         return true;
     } else {
         return false;
