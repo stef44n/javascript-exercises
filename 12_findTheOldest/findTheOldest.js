@@ -4,6 +4,11 @@ const findTheOldest = function(people) {
 
     function age(people) {
         for (let i = 0; i < pLen; i++) {
+            if (people[i]['yearOfDeath'] === undefined) {
+                const d = new Date()
+                let year = d.getFullYear()
+                people[i]['yearOfDeath'] = year
+            }
             people[i]['age'] = people[i]['yearOfDeath'] - people[i]['yearOfBirth']
         }
     }
